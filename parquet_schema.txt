@@ -1,0 +1,31 @@
+┌──────────────────────┬─────────────┬──────┬──────┬─────────┬───────┐
+│     column_name      │ column_type │ null │ key  │ default │ extra │
+├──────────────────────┼─────────────┼──────┼──────┼─────────┼───────┤
+│ id                   │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ sector               │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ title                │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ employer             │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ industry             │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ borough              │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ work_address         │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ workplace_type       │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ employment_type      │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ career_level         │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ salary_min           │ DOUBLE      │ YES  │ NULL │ NULL    │ NULL  │
+│ salary_max           │ DOUBLE      │ YES  │ NULL │ NULL    │ NULL  │
+│ salary_min_annual    │ DOUBLE      │ YES  │ NULL │ NULL    │ NULL  │
+│ salary_max_annual    │ DOUBLE      │ YES  │ NULL │ NULL    │ NULL  │
+│ salary_period        │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ skills               │ VARCHAR[]   │ YES  │ NULL │ NULL    │ NULL  │
+│ skill_ids            │ VARCHAR[]   │ YES  │ NULL │ NULL    │ NULL  │
+│ education_level      │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ certifications       │ VARCHAR[]   │ YES  │ NULL │ NULL    │ NULL  │
+│ languages_required   │ VARCHAR[]   │ YES  │ NULL │ NULL    │ NULL  │
+│ experience_years_min │ DOUBLE      │ YES  │ NULL │ NULL    │ NULL  │
+│ posting_date         │ DATE        │ YES  │ NULL │ NULL    │ NULL  │
+│ expiry_date          │ DATE        │ YES  │ NULL │ NULL    │ NULL  │
+│ posting_type         │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ number_of_positions  │ DOUBLE      │ YES  │ NULL │ NULL    │ NULL  │
+│ apply_url            │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+│ source_url           │ VARCHAR     │ YES  │ NULL │ NULL    │ NULL  │
+└──────────────────────┴─────────────┴──────┴──────┴─────────┴───────┘
