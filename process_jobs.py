@@ -291,7 +291,7 @@ def map_public(r: dict, skills: list[str], skill_ids: list[str]) -> dict:
 
 
 def map_private(r: dict, skills: list[str], skill_ids: list[str]) -> dict:
-    desc    = r.get("description_text", "")
+    desc    = r.get("description_text") or ""
     sal_min = r.get("salary_min")
     sal_max = r.get("salary_max")
     period  = normalize_period(r.get("salary_period"))
@@ -355,8 +355,8 @@ def extract_skills_batch(
     output = []
     for doc in results:
         mapped = doc._.mapped_skills or []
-        names = [s["skill_label"] for s in mapped if s.get("skill_label")]
-        ids   = [str(s["skill_id"])    for s in mapped if s.get("skill_id")]
+        names = [s["match_skill"] for s in mapped if s and s.get("match_skill")]
+        ids   = [str(s["match_id"])   for s in mapped if s and s.get("match_id")]
         output.append((names, ids))
     return output
 
@@ -419,7 +419,7 @@ def main() -> None:
         if sector == "public":
             desc = _description_for_public(r)
         else:
-            desc = r.get("description_text", "")
+            desc = r.get("description_text") or ""
 
         descriptions.append(desc)
         batch_meta.append((r["job_id"],))
@@ -453,7 +453,7 @@ def main() -> None:
 
     # Write Parquet
     print(f"Writing {OUTPUT_FILE}...")
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows).drop(columns=["description"])
     # Parquet requires list columns to have consistent types
     for col in ("skills", "skill_ids", "certifications", "languages_required"):
         df[col] = df[col].apply(lambda x: x if isinstance(x, list) else [])
