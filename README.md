@@ -2,10 +2,12 @@
 # NYC Job Skills Dashboard
 
 An interactive dashboard exploring job postings, in-demand skills, and salary trends 
-across New York City's five boroughs. Built to help job seekers understand where 
-opportunities are — we extract and analyze job descriptions using NLP to surface the 
-skills employers are actually looking for and delivering **curated job opportunities 
+across New York City's five boroughs. Built to give job seekers a hyperlocal understanding of where opportunities are — 
+we extract and analyze job descriptions using NLP to translate the near real-time
+skills employers are actually looking for, helping job seekers gain clarity and delivering **curated job opportunities 
 directly to your inbox** via email.
+
+
 
 ## 📁 Project Structure
 
